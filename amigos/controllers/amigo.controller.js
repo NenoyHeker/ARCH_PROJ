@@ -20,7 +20,7 @@ const listarAmigo = (req,res) =>{
 }
 
 
-
+/*
 const crearNuevoAmigo = (req, res) => {
     try {
         const nuevoAmigo = crearAmigo(req.body);
@@ -59,7 +59,7 @@ const eliminarUnAmigo = (req, res) => {
         res.status(500).send(err);
     }
 }
+*/
 
 
-
-module.exports = {listarAmigos,listarAmigo}
+module.exports = {listarAmigos,listarAmigo};

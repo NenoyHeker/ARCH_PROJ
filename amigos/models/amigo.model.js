@@ -19,7 +19,7 @@ const getAmigo = id =>{
 }
 
 
-
+/*
 const crearAmigo = (amigo) => {
     try {
         // Genera un nuevo ID para el amigo (debes manejar la asignación de ID)
@@ -60,6 +60,6 @@ const eliminarAmigo = (id) => {
     }
 }
 
+*/
 
-
-module.exports={getAmigos,getAmigo}
+module.exports={getAmigos,getAmigo};

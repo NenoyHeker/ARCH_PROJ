@@ -1,4 +1,4 @@
-//Base de datos
+
 //Base de datos
 const db = [
     {id: 1, nombre: 'Juan'},
@@ -13,4 +13,4 @@ const db = [
     {id: 10, nombre: 'Miguel'},
 ]
 
-module.exports = db
+module.exports = {db};
