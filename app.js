@@ -1,11 +1,24 @@
-const express = require('express')
+const express = require("express");
+const cors = require('cors');
+const mongoose = require("mongoose");
+require("dotenv").config();
+
+//configuración del servidor
 
 const app = express()
-const port = 7070
+const port = process.env.PORT || 9000;
+app.use(cors());
 
+//rutas
 
-const amigoRoutes=require('./amigos/routes/amigo.routes')
+const catRoutes=require('./gato/routes/gato.routes')
+app.use('/gatos',catRoutes)
 
-app.use('/amigos',amigoRoutes)
+//mongodb driver
 
-app.listen(port,()=>console.log(`Servidor escuchando en http://localhost ${port}`))
+mongoose.connect(
+    process.env.URI_MDB)
+    .then(()=> console.log("Connected to MongoDB Atlas"))
+    .catch((error)=> console.log(error));
+
+app.listen(port, () => console.log('server listening on port ', port));
