@@ -13,4 +13,4 @@ const db = [
     {id: 10, nombre: 'Miguel'},
 ]
 
-module.exports = {db};
+module.exports = db

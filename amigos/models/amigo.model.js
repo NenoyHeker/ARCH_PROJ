@@ -2,11 +2,13 @@ const db = require('../../db/db')
 
 const getAmigos = () => {
     try{
+        console.log('furula');
         return db
     }catch (err){
         console.error('Error al obtener los datos',err)
     }
 }
+
 
 
 

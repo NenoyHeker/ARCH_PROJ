@@ -8,4 +8,4 @@ const amigoRoutes=require('./amigos/routes/amigo.routes')
 
 app.use('/amigos',amigoRoutes)
 
-app.listen(port,()=>console.log(`Servidor escuchando en http://localhost${port}`))
+app.listen(port,()=>console.log(`Servidor escuchando en http://localhost ${port}`))
