@@ -1,0 +1,66 @@
+//AGREGAR GATOS//
+###
+//Gato 1
+POST http://localhost:9000/gatos/addcat HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Fato Kato",
+    "color": "Naranja",
+    "lives": "2"
+}
+
+
+###
+//Gato 2
+POST http://localhost:9000/gatos/addcat HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Rosel",
+    "color": "Beige",
+    "lives": "0"
+}
+
+
+###
+//Gato 3
+POST http://localhost:9000/gatos/addcat HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Tara",
+    "color": "Gris",
+    "lives": "tiende a infinito"
+}
+
+
+//MOSTRAR GATOS
+###
+
+GET http://localhost:9000/gatos/cats HTTP/1.1
+
+
+//MOSTRAR GATO 2
+###
+
+GET http://localhost:9000/gatos/patcat/653898638d8e02faec8bd74e HTTP/1.1
+
+
+//MODIFICAR GATO
+###
+
+PUT http://localhost:9000/gatos/updatecat/653898638d8e02faec8bd74e HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Rosel",
+    "color": "Blanco",
+    "lives": "1"
+}
+
+
+//BORRAR GATO
+###
+
+DELETE http://localhost:9000/gatos/killcat/653898638d8e02faec8bd74e HTTP/1.1

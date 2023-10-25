@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require('cors');
 const mongoose = require("mongoose");
+const bodyParser = require('body-parser');
 require("dotenv").config();
 
 //configuración del servidor
@@ -11,8 +12,16 @@ app.use(cors());
 
 //rutas
 
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
 const catRoutes=require('./gato/routes/gato.routes')
 app.use('/gatos',catRoutes)
+
+
+app.get('/', (req, res)=> {
+    res.send("Bienvenido a los Gatos");
+});
+
 
 //mongodb driver
 
