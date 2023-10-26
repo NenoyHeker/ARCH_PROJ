@@ -37,7 +37,6 @@ Content-Type: application/json
 
 //MOSTRAR GATOS
 ###
-
 GET http://localhost:9000/gatos/cats HTTP/1.1
 
 
